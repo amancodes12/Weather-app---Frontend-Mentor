@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+    <nav>
+      <img
+        src="logo.svg"
+        alt="logo"
+        style="backdrop-filter: blur(10px)"
+      />
+    </nav>
+     <select class="units-dropdown" id="unitSelector">
+                <option value="metric">⚙️ Celsius</option>
+                <option value="imperial">⚙️ Fahrenheit</option>
+            </select>
+
+    </header>
+    <main>
+      <div class="container">
+        <!-- Header section -->
+        <div class="header">
+          <h2>How's the sky looking today?</h2>
+          <div class="search">
+            <form onsubmit="getCity(event)">
+              <input
+                type="text"
+                id="cityName"
+                placeholder="Search location..."
+              />
+              <button type="submit">Search</button>
+            </form>
+
+            <h1 id="resultsDiv"></h1>
+          </div>
+        </div>
+
+        <!-- Main content area -->
+        <div class="main-content">
+          <div class="section-1">
+            <!-- Temperature display -->
+            <div class="temperature">
+              <div class="info">
+                <h3 id="location">Abraka, Nigeria</h3>
+                <h3 id="date"></h3>
+              </div>
+              <!-- <h3 id="weather-description">Loading weather data...</h3> -->
+              <div id="img">
+                <!-- <img src="./assets/images/icon-fog.webp" alt="" style="height: 80px; width: 100px;"> -->
+                <p>--</p>
+              </div>
+              <h1 id="current_temp">--°</h1>
+            </div>
+            <!-- Weather details grid -->
+            <div id="weather-details" class="weather-details">
+              <div id="temperature">
+                <h2>Feels Like</h2>
+                <h3 id="feels-like">--°</h3>
+              </div>
+              <div id="humidity">
+                <h2>Humidity</h2>
+                <h3 id="humidity-value">--%</h3>
+              </div>
+              <div id="wind">
+                <h2>Wind Speed</h2>
+                <h3 id="wind-speed">
+                  -- <span style="font-size: 14px">km/h</span>
+                </h3>
+              </div>
+              <div id="precipitation">
+                <h2>Precipitation</h2>
+                <h3>0 <span style="font-size: 14px">mm</span></h3>
+              </div>
+            </div>
+
+            <div id="daily-details" class="daily-details">
+              <h3>Daily Forecast</h3>
+              <div class="daily-forcast">
+                <div id="0">
+                  <h4>Sunday</h4>
+                  <p class="dailyImg">
+                    <span class="loading">Loading...</span>
+                  </p>
+                  <h2>--</h2>
+                </div>
+                <div id="1">
+                  <h4>Monday</h4>
+                  <p class="dailyImg">
+                    <span class="loading">Loading...</span>
+                  </p>
+                  <h2>--</h2>
+                </div>
+                <div id="2">
+                  <h4>Tuesday</h4>
+                  <p class="dailyImg">
+                    <span class="loading">Loading...</span>
+                  </p>
+                  <h2>--</h2>
+                </div>
+                <div id="3">
+                  <h4>Wednesday</h4>
+                  <p class="dailyImg">
+                    <span class="loading">Loading...</span>
+                  </p>
+                  <h2>--</h2>
+                </div>
+                <div id="4">
+                  <h4>Thursday</h4>
+                  <p class="dailyImg">
+                    <span class="loading">Loading...</span>
+                  </p>
+                  <h2>--</h2>
+                </div>
+                <div id="5">
+                  <h4>Friday</h4>
+                  <p class="dailyImg">
+                    <span class="loading">Loading...</span>
+                  </p>
+                  <h2>--</h2>
+                </div>
+                <div id="6">
+                  <h4>Saturday</h4>
+                  <p class="dailyImg">
+                    <span class="loading">Loading...</span>
+                  </p>
+                  <h2>--</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-2">
+            <h3 style="text-align: start; opacity: 0.8; margin-bottom: 20px">
+              Hourly forcast
+            </h3>
+            <div id="hour-forcast" class="hour-forcast">
+              <div>
+                <h1 class="hourly-img">--</h1>
+                <span class="hour">--</span>
+                <p class="hour-temp">--</p>
+              </div>
+              <div>
+                <h1 class="hourly-img">--</h1>
+                <p class="hour">--</p>
+                <p class="hour-temp">--</p>
+              </div>
+              <div>
+                <h1 class="hourly-img">--</h1>
+                <p class="hour">--</p>
+                <p id="hourly-temp" class="hour-temp">--</p>
+              </div>
+              <div>
+                <h1 class="hourly-img">--</h1>
+                <p class="hour">--</p>
+                <p id="hourly-temp" class="hour-temp">--</p>
+              </div>
+              <div>
+                <h1 class="hourly-img">--</h1>
+                <p class="hour">--</p>
+                <p id="hourly-temp" class="hour-temp">--</p>
+              </div>
+              <div>
+                <h1 class="hourly-img">--</h1>
+                <p class="hour">--</p>
+                <p id="hourly-temp" class="hour-temp">--</p>
+              </div>
+              <div>
+                <h1 class="hourly-img">--</h1>
+                <p class="hour">--</p>
+                <p id="hourly-temp" class="hour-temp">--</p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Paul ukrakpo</a>.
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
