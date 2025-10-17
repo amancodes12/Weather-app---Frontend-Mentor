@@ -50,4 +50,4 @@ git clone [your-repo-link]
 
 🌐 Live Demo
 
-Click here to view the live project
+https://skynoww.netlify.app/
