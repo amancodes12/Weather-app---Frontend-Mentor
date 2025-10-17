@@ -38,7 +38,7 @@ I built this **basic Weather App during my examinations**. Though time was limit
 
 1. Clone the repository:  
 
-git clone [your-repo-link]
+git clone [https://github.com/amancodes12/Weather-app---Frontend-Mentor]
 2. Open index.html in your browser
 
 3. Enter a location in the search bar
